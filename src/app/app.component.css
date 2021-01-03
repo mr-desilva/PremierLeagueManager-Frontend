@@ -1,0 +1,60 @@
+nav a {
+  display: block;
+  color: white;
+  text-align: left;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-family: "Arial Rounded MT Bold";
+}
+
+.active {
+  background-color: #e90052;
+}
+
+nav {
+  list-style-type: none;
+  padding: 10px;
+  overflow: hidden;
+  background: #38003c;
+}
+
+a {
+  float: left;
+}
+
+nav a:hover:not(.active) {
+  background-color: #0ead39;
+}
+
+.header {
+  position: absolute; left: 1100px; top:-1px;
+  font-family: "Arial Rounded MT Bold";
+  -webkit-text-fill-color: #dddddd;
+}
+
+.cover {
+  position: relative;
+  height: 650px;
+  width: 1520px;
+}
+
+.bg-img {
+  background-image: url("src/assets/homeCropped.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100px;
+  width: 1503px;
+  position: relative; top: 50px; right: 3px;
+  padding-top: 40px;
+}
+.space {
+  position: relative; left: 220px;
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 3px solid #111111;
+  border-radius: 4px;
+  box-sizing: border-box;
+}

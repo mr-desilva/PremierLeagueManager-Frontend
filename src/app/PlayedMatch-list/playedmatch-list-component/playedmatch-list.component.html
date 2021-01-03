@@ -1,0 +1,36 @@
+<script src="playedmatch-list.component.ts"></script><h1></h1>
+<h1 class="header">Played Matches</h1>
+<div>
+  <div>
+    <!--Table to display Match statistics-->
+    <table id="ScoreTable" >
+      <thead>
+      <tr>
+        <th>Home Team</th>
+        <th>Opponent Team</th>
+        <th>Home Team Score</th>
+        <th>Opponent Team Score</th>
+        <th>Day</th>
+        <th>Month</th>
+        <th>Year</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <!--Getting object by object from the serviceGetMatch array for display match statistics-->
+      <tr *ngFor="let match of serviceGetMatch">
+        <td>{{match.team1}}</td>
+        <td>{{match.team2}}</td>
+        <td>{{match.team1GoalScore}}</td>
+        <td>{{match.team2GoalScore}}</td>
+        <td>{{match.date.day}}</td>
+        <td>{{match.date.month}}</td>
+        <td>{{match.date.year}}</td>
+      </tr>
+    </tbody>
+    </table>
+  </div>
+  <!--Div for Footer Image-->
+  <div class="bg-img"></div>
+</div>
+<router-outlet></router-outlet>

@@ -1,0 +1,46 @@
+<h1 class="header">Premier League Table</h1>
+<div>
+  <div>
+    <!--Table to display statistics-->
+    <table id="ScoreTable">
+      <thead>
+      <tr>
+        <th>Club Name</th>
+        <th>Club Location</th>
+        <th>Wins<i></i></th>
+        <th>Draws</th>
+        <th>Defeats</th>
+        <th>Goal Received</th>
+        <th>Goal Scored<i></i></th>
+        <th>Goal Difference</th>
+        <th>Points</th>
+        <th>Played Matches</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <!--Getting object by object from the serviceGetClub array for display statistics-->
+      <!--Sorting by descending order-->
+      <tr *ngFor="let footballClub of serviceGetClubs | orderBy: key:reverse">
+        <td>{{footballClub.clubName}}</td>
+        <td>{{footballClub.clubLocation}}</td>
+        <td>{{footballClub.wins}}</td>
+        <td>{{footballClub.draws}}</td>
+        <td>{{footballClub.defeats}}</td>
+        <td>{{footballClub.goalsReceived}}</td>
+        <td>{{footballClub.goalScored}}</td>
+        <td>{{footballClub.goalScored - footballClub.goalsReceived}}</td>
+        <td>{{footballClub.numberOfPoints}}</td>
+        <td>{{footballClub.numberOfPlayedMatches}}</td>
+      </tr>
+      </tbody>
+
+      <button (click)="sortByClick('wins')">Sort by Wins</button>
+      <button (click)="sortByClick('goalScored')">Sort by Goal Scored</button>
+    </table>
+
+  </div>
+  <!--Div tag for Footer Image-->
+  <div class="bg-img"></div>
+</div>
+<router-outlet></router-outlet>

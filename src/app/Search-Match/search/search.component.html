@@ -1,0 +1,49 @@
+<h1 class="header">Search Match</h1>
+<div>
+  <!--Search Field Section-->
+  <div>
+    <nav id="searchBox">
+      <input class="searchField"  type = "text" #day placeholder="Enter the Day" (click)="day.value = ''">
+
+      <input class="searchField"  type = "text" #month placeholder="Enter the Month" (click)="month.value = ''" >
+
+      <input class="searchField"  type = "text" #year placeholder="Enter the Year" (click)="year.value = ''">
+
+      <!--Passing the day, month, year values from the text field to the getDate method-->
+      <button (click)="getDate(day.value,month.value,year.value)">Search</button>
+      <button (click)="viewMatches()">View All</button>
+    </nav>
+  </div>
+  <!--Table to display Match statistics-->
+  <div>
+    <table id="ScoreTable">
+      <thead>
+      <tr>
+        <th>Home Team</th>
+        <th>Opponent Team</th>
+        <th>Home Team Score</th>
+        <th>Opponent Team Score</th>
+        <th>Day</th>
+        <th>Month</th>
+        <th>Year</th>
+      </tr>
+      </thead>
+      <tbody>
+      <!--Getting object by object from the serviceSearchMatch array for display match statistics-->
+      <tr *ngFor= "let searchedMatch of serviceSearchMatch">
+        <td>{{searchedMatch.team1}}</td>
+        <td>{{searchedMatch.team2}}</td>
+        <td>{{searchedMatch.team1GoalScore}}</td>
+        <td>{{searchedMatch.team2GoalScore}}</td>
+        <td>{{searchedMatch.date.day}}</td>
+        <td>{{searchedMatch.date.month}}</td>
+        <td>{{searchedMatch.date.year}}</td>
+      </tr>
+      </tbody>
+    </table>
+    <div class="space"></div>
+  </div>
+  <!--Footer Image Section-->
+  <div class="bg-img"></div>
+</div>
+<router-outlet></router-outlet>

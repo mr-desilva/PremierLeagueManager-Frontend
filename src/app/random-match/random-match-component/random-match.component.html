@@ -1,0 +1,36 @@
+<h1 class="header">Play Match</h1>
+<div>
+  <div>
+    <!--Table to display Match statistics-->
+    <table id="ScoreTable" >
+      <thead>
+      <tr>
+        <th>Home Team</th>
+        <th>Opponent Team</th>
+        <th>Home Team Score</th>
+        <th>Opponent Team Score</th>
+        <th>Day</th>
+        <th>Month</th>
+        <th>Year</th>
+      </tr>
+      </thead>
+      <tbody>
+      <!--Getting object by object from the serviceGetRandomMatch array for display match statistics-->
+      <tr *ngFor="let randomMatch of serviceGetRandomMatch">
+        <td>{{randomMatch.team1}}</td>
+        <td>{{randomMatch.team2}}</td>
+        <td>{{randomMatch.team1GoalScore}}</td>
+        <td>{{randomMatch.team2GoalScore}}</td>
+        <td>{{randomMatch.date.day}}</td>
+        <td>{{randomMatch.date.month}}</td>
+        <td>{{randomMatch.date.year}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+  <!--This div is for button-->
+  <table id="ScoreTable"><button (click)="generate()">Play Random Match</button></table>
+  <!--This div is for footer section-->
+  <div class="bg-img"></div>
+</div>
+<router-outlet></router-outlet>

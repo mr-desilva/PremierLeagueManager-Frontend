@@ -1,0 +1,54 @@
+/*football-club.component.css*/
+#ScoreTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#ScoreTable td, #ScoreTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.header {
+  position: relative; left:10px;
+  font-family: "Arial Rounded MT Bold";
+}
+
+.bg-img {
+  background-image: url("src/assets/footerPML.JPG");
+  object-fit: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 150px;
+}
+
+#ScoreTable tr:nth-child(even){background-color: #f2f2f2;}
+#ScoreTable tr:not(nth-child){background-color: #f2f2f2;}
+
+#ScoreTable tr:hover {background-color: #ddd;}
+
+#ScoreTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #460854;
+  color: white;
+}
+#ScoreTable button {
+  padding: 15px 32px;
+  position: relative; left: 580px; top: 30px;
+  background: #69f5a1;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+  border-style: solid;
+  border-color: #111111;
+}
+#ScoreTable button:hover:not(.active) {
+  background-color: #460854;
+  -webkit-text-fill-color: #dddddd;
+}
+
+

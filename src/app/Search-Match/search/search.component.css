@@ -1,0 +1,84 @@
+.header {
+  position: relative; left:10px;
+  font-family: "Arial Rounded MT Bold";
+}
+
+#ScoreTable {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#ScoreTable td, #ScoreTable th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+.bg-img {
+  background-image: url("src/assets/footerPML.JPG");
+  object-fit: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 150px;
+}
+
+#ScoreTable tr:nth-child(even){background-color: #f2f2f2;}
+
+#ScoreTable tr:hover {background-color: #ddd;}
+
+#ScoreTable th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #460854;
+  color: white;
+}
+
+
+#searchBox {
+  position: relative; left: 220px;
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 3px solid #111111;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.searchField{
+  position: relative;
+  width: 20%;
+  padding: 12px 20px;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 5%;
+  box-sizing: border-box;
+}
+
+.space {
+  position: relative; left: 220px;
+  width: 70%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+#searchBox button {
+  padding: 15px 32px;
+  position: relative; left: 20px;
+  background: #69f5a1;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+  border-style: solid;
+  border-color: #111111;
+}
+#searchBox button:hover:not(.active) {
+  background-color: #460854;
+  -webkit-text-fill-color: #dddddd;
+}
